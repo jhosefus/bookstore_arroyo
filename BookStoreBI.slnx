@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Databases/" />
+  <Folder Name="/Databases/DataWarehouse/">
+    <Project Path="BookStoreDW/BookStoreDW.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/Databases/OLTP/">
+    <Project Path="BookStoreOLTP/BookStoreOLTP.sqlproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/ETL/" />
+  <Folder Name="/OLAP/" />
+</Solution>

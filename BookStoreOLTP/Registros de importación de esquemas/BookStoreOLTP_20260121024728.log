@@ -1,0 +1,90 @@
+20/01/2026 22:47:28	Este registro contiene información acerca de la operación de importación de esquema en el proyecto 'BookStoreOLTP' del equipo 'DESKTOP-N9URPU0' por el usuario 'ARROYO-PC'.
+20/01/2026 22:47:28	Se inició la importación del esquema de la base de datos.
+20/01/2026 22:47:47	Recopilando credenciales de la base de datos
+20/01/2026 22:47:47	Recopilando opciones de base de datos
+20/01/2026 22:47:47	Recopilando la opción de configuración de ámbito de la base de datos genérica
+20/01/2026 22:47:47	Recopilando usuarios
+20/01/2026 22:47:47	Recopilando roles
+20/01/2026 22:47:47	Recopilando roles de aplicación
+20/01/2026 22:47:47	Recopilando pertenencias a roles
+20/01/2026 22:47:47	Recopilando grupos de archivos
+20/01/2026 22:47:47	Recopilando catálogos de texto completo
+20/01/2026 22:47:47	Recopilando ensamblados
+20/01/2026 22:47:47	Recopilando certificados
+20/01/2026 22:47:47	Recopilando claves asimétricas
+20/01/2026 22:47:47	Recopilando claves simétricas
+20/01/2026 22:47:47	Recopilando claves simétricas cifradas
+20/01/2026 22:47:47	Recopilando esquemas
+20/01/2026 22:47:47	Recopilando colecciones de esquemas XML
+20/01/2026 22:47:47	Recopilando tipos de datos definidos por el usuario
+20/01/2026 22:47:47	Recopilando tipos definidos por el usuario
+20/01/2026 22:47:47	Recopilando tipos de tabla
+20/01/2026 22:47:47	Recopilando claves únicas para tipos de tabla
+20/01/2026 22:47:47	Recopilando claves principales para tipos de tabla
+20/01/2026 22:47:48	Recopilando índices para tipos de tablas
+20/01/2026 22:47:48	Recopilando restricciones CHECK para tipos de tabla
+20/01/2026 22:47:48	Recopilando restricciones DEFAULT para tipos de tabla
+20/01/2026 22:47:48	Recopilando funciones de partición
+20/01/2026 22:47:48	Recopilando esquemas de partición
+20/01/2026 22:47:48	Recopilando funciones
+20/01/2026 22:47:48	Recopilando funciones cifradas
+20/01/2026 22:47:48	Recopilando agregados
+20/01/2026 22:47:49	Recopilando procedimientos
+20/01/2026 22:47:50	Recopilando procedimientos cifrados
+20/01/2026 22:47:50	Recopilando tablas
+20/01/2026 22:47:51	Recopilando claves principales
+20/01/2026 22:47:52	Recopilando restricciones UNIQUE
+20/01/2026 22:47:52	Recopilando claves externas
+20/01/2026 22:47:53	Recopilando restricciones DEFAULT
+20/01/2026 22:47:53	Recopilando restricciones CHECK
+20/01/2026 22:47:53	Recopilando vistas
+20/01/2026 22:47:53	Recopilando vistas cifradas
+20/01/2026 22:47:53	Recopilando índices
+20/01/2026 22:47:53	Recopilando estadísticas
+20/01/2026 22:47:53	Recopilando listas de palabras irrelevantes de índices de texto completo
+20/01/2026 22:47:53	Recopilando listas de propiedades de búsqueda
+20/01/2026 22:47:53	Recopilando propiedades de búsqueda
+20/01/2026 22:47:53	Recopilando índices de texto completo
+20/01/2026 22:47:54	Recopilando índices de almacenamiento de columnas
+20/01/2026 22:47:54	Recopilando índices espaciales
+20/01/2026 22:47:54	Recopilando índices XML
+20/01/2026 22:47:54	Recolección de índices JSON
+20/01/2026 22:47:54	Recopilando índices XML selectivos
+20/01/2026 22:47:54	Recopilando desencadenadores cifrados
+20/01/2026 22:47:55	Recopilando desencadenadores
+20/01/2026 22:47:55	Recopilando DDL triggers cifrados y de CLR
+20/01/2026 22:47:55	Recopilando DDL triggers
+20/01/2026 22:47:55	Creación de la restricción perimetral en curso
+20/01/2026 22:47:55	Recopilando sinónimos
+20/01/2026 22:47:55	Recopilando valores predeterminados
+20/01/2026 22:47:55	Recopilando enlaces UDDT de restricción de datos
+20/01/2026 22:47:55	Recopilando reglas
+20/01/2026 22:47:55	Recopilando enlaces UDDT de restricción de datos
+20/01/2026 22:47:55	Recopilando tipos de mensaje
+20/01/2026 22:47:55	Recopilando colas
+20/01/2026 22:47:55	Recopilando contratos
+20/01/2026 22:47:55	Recopilando servicios
+20/01/2026 22:47:55	Recopilando notificaciones de eventos
+20/01/2026 22:47:55	Recopilando enlaces de servicio remoto
+20/01/2026 22:47:55	Recopilando prioridades de Broker
+20/01/2026 22:47:55	Recopilando firmas
+20/01/2026 22:47:55	Recopilando opciones de compresión
+20/01/2026 22:47:55	Recopilando tipos de secuencia
+20/01/2026 22:47:55	Recopilando directivas de seguridad
+20/01/2026 22:47:55	Recopilar claves de cifrado de columna
+20/01/2026 22:47:55	Recopilando claves maestras de columna
+20/01/2026 22:47:55	Recopilando orígenes de datos externos
+20/01/2026 22:47:55	Recopilando formatos de archivo externos
+20/01/2026 22:47:55	Recopilando modelos externos
+20/01/2026 22:47:55	Recopilando tablas externas
+20/01/2026 22:47:55	Recopilando opciones de compresión de índice XML
+20/01/2026 22:47:55	Recopilando propiedades extendidas
+20/01/2026 22:47:55	Recopilando ensamblados
+20/01/2026 22:47:55	Recopilando credenciales
+20/01/2026 22:47:55	Recopilando inicios de sesión
+20/01/2026 22:47:55	Recopilando auditorías de servidor
+20/01/2026 22:47:59	Buscando elementos duplicados en el proyecto
+20/01/2026 22:47:59	Ha finalizado el procesamiento de los elementos duplicados
+20/01/2026 22:48:00	Finalizó la importación de la base de datos.
+20/01/2026 22:48:00	Se guardó un resumen de la importación en la siguiente ubicación: C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\Registros de importación de esquemas\BookStoreOLTP_20260121024728.log
+20/01/2026 22:48:00	Haga clic en Finalizar para continuar...

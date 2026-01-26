@@ -1,0 +1,6 @@
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\bin\Debug\BookStoreOLTP.dacpac
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\bin\Debug\BookStoreOLTP.dll
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\bin\Debug\BookStoreOLTP.pdb
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\obj\Debug\BookStoreOLTP.sqlproj.AssemblyReference.cache
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\obj\Debug\BookStoreOLTP.dll
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreOLTP\obj\Debug\BookStoreOLTP.pdb

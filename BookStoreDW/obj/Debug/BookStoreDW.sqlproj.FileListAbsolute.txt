@@ -1,0 +1,10 @@
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\bin\Debug\BookStoreDW.dacpac
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\bin\Debug\BookStoreDW.dll
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\bin\Debug\BookStoreDW.pdb
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\BookStoreDW.sqlproj.AssemblyReference.cache
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\Model.xml
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\refactor.xml
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\postdeploy.sql
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\predeploy.sql
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\BookStoreDW.dll
+C:\Users\ARROYO-PC\source\repos\BookStoreBI\BookStoreDW\obj\Debug\BookStoreDW.pdb

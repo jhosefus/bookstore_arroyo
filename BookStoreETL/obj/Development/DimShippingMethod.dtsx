@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimShippingMethod"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{04E2F324-34A0-4007-9A58-FF2B5030A5FA}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{42D68493-A728-4815-AAE5-9FD205352C1D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -543,6 +543,22 @@ where [refTable].[MethodID] = ?</property>
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
                   synchronousInputId="Package\Load Shipping\LookUp.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Shipping\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ShippingMethodSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Load Shipping\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ShippingMethodSK]"
+                      name="ShippingMethodSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">ShippingMethodSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -665,6 +681,12 @@ where [refTable].[MethodID] = ?</property>
                       cachedName="method_name"
                       externalMetadataColumnId="Package\Load Shipping\Update stage.Inputs[Entrada de destino de OLE DB].ExternalColumns[MethodName]"
                       lineageId="Package\Load Shipping\Get Shipping.Outputs[Salida de origen de OLE DB].Columns[method_name]" />
+                    <inputColumn
+                      refId="Package\Load Shipping\Update stage.Inputs[Entrada de destino de OLE DB].Columns[ShippingMethodSK]"
+                      cachedDataType="i4"
+                      cachedName="ShippingMethodSK"
+                      externalMetadataColumnId="Package\Load Shipping\Update stage.Inputs[Entrada de destino de OLE DB].ExternalColumns[ShippingMethodSK]"
+                      lineageId="Package\Load Shipping\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ShippingMethodSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -996,21 +1018,21 @@ where [refTable].[MethodID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="114,42"
-          Id="Package\Load Shipping\LookUp"
-          TopLeft="223,146" />
-        <NodeLayout
           Size="199,42"
           Id="Package\Load Shipping\Load DimShippingMethod"
           TopLeft="316,248" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Load Shipping\Update stage"
+          TopLeft="129,254" />
         <NodeLayout
           Size="139,42"
           Id="Package\Load Shipping\Get Shipping"
           TopLeft="209,71" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Load Shipping\Update stage"
-          TopLeft="129,254" />
+          Size="114,42"
+          Id="Package\Load Shipping\LookUp"
+          TopLeft="223,146" />
         <EdgeLayout
           Id="Package\Load Shipping.Paths[Salida de origen de OLE DB]"
           TopLeft="279.25,113">
@@ -1109,30 +1131,20 @@ where [refTable].[MethodID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Shipping\LookUp">
+    design-time-name="Package\Load Shipping\Load DimShippingMethod">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimShippingMethod]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Shipping\Load DimShippingMethod">
+    design-time-name="Package\Load Shipping\Update stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1153,15 +1165,25 @@ where [refTable].[MethodID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Shipping\Update stage">
+    design-time-name="Package\Load Shipping\LookUp">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimShippingMethod]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

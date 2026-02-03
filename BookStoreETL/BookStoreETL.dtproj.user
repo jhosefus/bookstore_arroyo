@@ -10,7 +10,7 @@
         <WinAuthDomain />
         <ServerName>HOME</ServerName>
         <PathOnServer>/SSISDB/BookStore/BookStoreETL</PathOnServer>
-        <StartObjectID>DimShippingMethod.dtsx</StartObjectID>
+        <StartObjectID>FactOrders.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

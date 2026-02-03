@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{32DFBB4E-2737-45D3-9E7C-DD1D9B7A935E}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{B09560A5-0F76-4BE6-A7B7-C6FC2417922E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -771,6 +771,22 @@ where [refTable].[CustomerID] = ?</property>
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
                   synchronousInputId="Package\Load Customer\LookUp.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Customer\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[CustomerSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Load Customer\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[CustomerSK]"
+                      name="CustomerSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">CustomerSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -941,6 +957,12 @@ where [refTable].[CustomerID] = ?</property>
                       cachedName="address_status"
                       externalMetadataColumnId="Package\Load Customer\Update stage.Inputs[Entrada de destino de OLE DB].ExternalColumns[AddressStatus]"
                       lineageId="Package\Load Customer\Get Customer.Outputs[Salida de origen de OLE DB].Columns[address_status]" />
+                    <inputColumn
+                      refId="Package\Load Customer\Update stage.Inputs[Entrada de destino de OLE DB].Columns[CustomerSK]"
+                      cachedDataType="i4"
+                      cachedName="CustomerSK"
+                      externalMetadataColumnId="Package\Load Customer\Update stage.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustomerSK]"
+                      lineageId="Package\Load Customer\LookUp.Outputs[Salida de entradas coincidentes de búsqueda].Columns[CustomerSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1308,6 +1330,10 @@ where [refTable].[CustomerID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="141,42"
+          Id="Package\Load Customer\Update stage"
+          TopLeft="129,254" />
+        <NodeLayout
           Size="114,42"
           Id="Package\Load Customer\LookUp"
           TopLeft="223,146" />
@@ -1319,10 +1345,6 @@ where [refTable].[CustomerID] = ?</property>
           Size="144,42"
           Id="Package\Load Customer\Get Customer"
           TopLeft="209,71" />
-        <NodeLayout
-          Size="141,42"
-          Id="Package\Load Customer\Update stage"
-          TopLeft="129,254" />
         <EdgeLayout
           Id="Package\Load Customer.Paths[Salida de origen de OLE DB]"
           TopLeft="280.5,113">
@@ -1421,6 +1443,19 @@ where [refTable].[CustomerID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Load Customer\Update stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load Customer\LookUp">
     <Properties>
       <Property>
@@ -1461,19 +1496,6 @@ where [refTable].[CustomerID] = ?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Update stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

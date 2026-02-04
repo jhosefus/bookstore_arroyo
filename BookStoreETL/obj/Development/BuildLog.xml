@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>BookStoreETL</Name>
-    <LastWriteTime>2026-02-03T04:21:35.6692761Z</LastWriteTime>
+    <LastWriteTime>2026-02-04T03:38:29.9589376Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimAddress.dtsx</Name>
-      <LastWriteTime>2026-02-02T05:52:40.0535073Z</LastWriteTime>
+      <LastWriteTime>2026-02-04T02:40:52.9781639Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactOrders.dtsx</Name>
-      <LastWriteTime>2026-02-03T04:26:52.688279Z</LastWriteTime>
+      <LastWriteTime>2026-02-04T04:09:31.9408859Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimShippingMethod.dtsx</Name>
-      <LastWriteTime>2026-02-03T01:05:59.4374103Z</LastWriteTime>
+      <LastWriteTime>2026-02-04T02:49:59.9542066Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

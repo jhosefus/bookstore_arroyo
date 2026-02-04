@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-N9URPU0</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzoFo5UX2dEi/DAMdEFx5WQAAAAACAAAAAAAQZgAAAAEAACAAAABrYf2Y665YG9OY6w51MFQJOQz1F6ypjzUh/CXN/26/hgAAAAAOgAAAAAIAACAAAAAkAakcwiIR11kvRlzIZjyLuAcfW51KEhX4PMH0c4ow0pAAAACXbBguPjImMTL6xm38FjQBoMzv3HFpwRr3sArR156yGxXueWblapZoVHY9HEHTBevvZtSI41v2O6F9Bw2m7mQBBFHZBVatjUbaoQXBC/r2ToQwT5hUirL4yVLo0OmEDvCcGYpDGsNX+tgqpGCMtEt5jcNNWETDRaqbj5u9izibX4rjLQ/Vsiku0Uw3en8dBAxAAAAAQIrJaq3FInSTLdghPNr2fcLX8MSDxE8GwvxwugqNrIuMyNiT7jKYy2du8YrQB+9iQctAfvoFpS3ZnDWOzy9Nug==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzoFo5UX2dEi/DAMdEFx5WQAAAAACAAAAAAAQZgAAAAEAACAAAAAvChx4ixoVZOAL2qZqpcnNzQTI+tJzNCDMgneNIIVfyQAAAAAOgAAAAAIAACAAAABzsVVGK7vQXh5HSryX8ZfWoXzPObBjVLZL8V7Y7/X42pAAAABmsyd0nREbwyVHhQ54/cc6TplWWnXgao/KZVfVKhpoIcRrpF8uL5AuRBDsaTCNqicIgLExA3GCLSk3kOPl8XZsyzo0t5Cgj7WJUeDVF2MW/szbs9K4vnepi5znYNqqoL+CdDZHVftoIwkd8MwIqASLNlXauRHA82UZfDslUDkd90vPabY+zy0LUPq5Bvi7qJ9AAAAAQ5GoJAgabFXQIwaeQb2OSXbQBt4xON33l+1YNsoO4JBAszlqbo9//uNzaq+1qFWD+Vo3TZ+ZEt2WoiCx5ZgMvA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -46,10 +46,10 @@
                 <SSIS:Property SSIS:Name="Name">DimAddress</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">25</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9AD8EC83-DBC0-486C-B60D-712D2B073773}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C3D3AFC0-EEA0-4BCA-A0C5-B1D9ABB801DC}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -82,7 +82,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=HOME;Initial Catalog=BookStoreDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-DimAddress-{13FA269B-9449-4097-A0F6-82A221B9B0A9}HOME.BookStoreDW;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=HOME;Initial Catalog=BookStoreDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-DimAddress-{13FA269B-9449-4097-A0F6-82A221B9B0A9}HOME.BookStoreDW;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -230,7 +230,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=HOME;Initial Catalog=Bookstore;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-DimAddress-{F7E93B35-D5C1-43C9-A1A0-9C6B0D4E57C3}HOME.Bookstore;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=HOME;Initial Catalog=Bookstore;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-DimAddress-{F7E93B35-D5C1-43C9-A1A0-9C6B0D4E57C3}HOME.Bookstore;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -360,10 +360,10 @@
                 <SSIS:Property SSIS:Name="Name">FactOrders</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">35</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3FBD17FD-3278-43D5-95F4-D3D168782BBA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F9597C55-7E8B-41C7-8188-D978208AEC70}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1302,10 +1302,10 @@
                 <SSIS:Property SSIS:Name="Name">DimShippingMethod</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{04E2F324-34A0-4007-9A58-FF2B5030A5FA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BBDB256A-232C-4B8C-8920-7328536BE798}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

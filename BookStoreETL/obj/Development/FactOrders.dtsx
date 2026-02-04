@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="FactOrders"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{59004C63-973B-4E4F-9B07-B68B744133CB}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{AA95C037-CF06-4B3A-9C3A-87C7FEFF2803}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -240,6 +240,15 @@
                       lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[status_value]"
                       name="status_value"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[line_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].ExternalColumns[line_id]"
+                      lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[line_id]"
+                      name="line_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -291,6 +300,10 @@
                       dataType="str"
                       length="20"
                       name="status_value" />
+                    <externalMetadataColumn
+                      refId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].ExternalColumns[line_id]"
+                      dataType="i4"
+                      name="line_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -303,6 +316,11 @@
                       dataType="i4"
                       lineageId="Package\Add Orders\Get Orders.Outputs[Salida de error de origen de OLE DB].Columns[order_id]"
                       name="order_id" />
+                    <outputColumn
+                      refId="Package\Add Orders\Get Orders.Outputs[Salida de error de origen de OLE DB].Columns[line_id]"
+                      dataType="i4"
+                      lineageId="Package\Add Orders\Get Orders.Outputs[Salida de error de origen de OLE DB].Columns[line_id]"
+                      name="line_id" />
                     <outputColumn
                       refId="Package\Add Orders\Get Orders.Outputs[Salida de error de origen de OLE DB].Columns[OrderDateKey]"
                       dataType="i4"
@@ -516,13 +534,15 @@
                       cachedName="order_id"
                       externalMetadataColumnId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].ExternalColumns[OrderID]"
                       lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].Columns[line_id]"
+                      cachedDataType="i4"
+                      cachedName="line_id"
+                      externalMetadataColumnId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].ExternalColumns[LineID]"
+                      lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[line_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].ExternalColumns[OrderSK]"
-                      dataType="i8"
-                      name="OrderSK" />
                     <externalMetadataColumn
                       refId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].ExternalColumns[OrderID]"
                       dataType="i4"
@@ -573,6 +593,10 @@
                       dataType="str"
                       length="20"
                       name="StatusValue" />
+                    <externalMetadataColumn
+                      refId="Package\Add Orders\Load Orders.Inputs[Entrada de destino de OLE DB].ExternalColumns[LineID]"
+                      dataType="i4"
+                      name="LineID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -743,6 +767,12 @@
                       cachedName="order_date"
                       externalMetadataColumnId="Package\Add Orders\Load staging.Inputs[Entrada de destino de OLE DB].ExternalColumns[OrderDate]"
                       lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[order_date]" />
+                    <inputColumn
+                      refId="Package\Add Orders\Load staging.Inputs[Entrada de destino de OLE DB].Columns[line_id]"
+                      cachedDataType="i4"
+                      cachedName="line_id"
+                      externalMetadataColumnId="Package\Add Orders\Load staging.Inputs[Entrada de destino de OLE DB].ExternalColumns[LineID]"
+                      lineageId="Package\Add Orders\Get Orders.Outputs[Salida de origen de OLE DB].Columns[line_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -796,6 +826,10 @@
                       dataType="str"
                       length="20"
                       name="StatusValue" />
+                    <externalMetadataColumn
+                      refId="Package\Add Orders\Load staging.Inputs[Entrada de destino de OLE DB].ExternalColumns[LineID]"
+                      dataType="i4"
+                      name="LineID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1796,6 +1830,14 @@ where [refTable].[OrderID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="132,42"
+          Id="Package\Add Orders"
+          TopLeft="265,253" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Clean-up Staging"
+          TopLeft="250,185" />
+        <NodeLayout
           Size="199,42"
           Id="Package\Get Database Rowversion"
           TopLeft="232,48" />
@@ -1803,6 +1845,14 @@ where [refTable].[OrderID] = ?</property>
           Size="189,42"
           Id="Package\Get Orders RowVersion"
           TopLeft="235,117" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Sync Staging"
+          TopLeft="261,320" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Update Config"
+          TopLeft="261,388" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="330.5,90">
@@ -1825,10 +1875,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Clean-up Staging"
-          TopLeft="250,185" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="329.5,159">
@@ -1851,10 +1897,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Add Orders"
-          TopLeft="265,253" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="330.25,227">
@@ -1877,10 +1919,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Sync Staging"
-          TopLeft="261,320" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="331,295">
@@ -1903,10 +1941,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="146,42"
-          Id="Package\Update Config"
-          TopLeft="261,388" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="332.5,362">
@@ -1938,71 +1972,17 @@ where [refTable].[OrderID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="130,42"
-          Id="Package\Add Orders\Get Orders"
-          TopLeft="266,12" />
+          Size="136,42"
+          Id="Package\Add Orders\Load Orders"
+          TopLeft="357,438" />
         <NodeLayout
           Size="154,42"
           Id="Package\Add Orders\Lookup Address"
           TopLeft="250,87" />
-        <EdgeLayout
-          Id="Package\Add Orders.Paths[Salida de origen de OLE DB]"
-          TopLeft="329,54">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Add Orders\Lookup Book"
-          TopLeft="258,291" />
         <NodeLayout
           Size="161,42"
           Id="Package\Add Orders\Lookup Customer"
           TopLeft="252,161" />
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Add Orders\Lookup ShippingMethod"
-          TopLeft="236,226" />
-        <EdgeLayout
-          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="332.25,203">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,1.65234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="154,42"
           Id="Package\Add Orders\Looukup Orders"
@@ -2011,6 +1991,42 @@ where [refTable].[OrderID] = ?</property>
           Size="139,42"
           Id="Package\Add Orders\Load staging"
           TopLeft="136,435" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Add Orders\Get Orders"
+          TopLeft="266,12" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Add Orders\Lookup Book"
+          TopLeft="258,291" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Add Orders\Lookup ShippingMethod"
+          TopLeft="236,226" />
+        <EdgeLayout
+          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda2]"
+          TopLeft="329.75,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,6.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda1]"
           TopLeft="324,406">
@@ -2047,10 +2063,52 @@ where [refTable].[OrderID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="136,42"
-          Id="Package\Add Orders\Load Orders"
-          TopLeft="357,438" />
+        <EdgeLayout
+          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="332.25,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,1.65234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add Orders.Paths[Salida de origen de OLE DB]"
+          TopLeft="329,54">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Add Orders.Paths[Salida de entradas no coincidentes de búsqueda]"
           TopLeft="348.333333333333,406">
@@ -2083,55 +2141,7 @@ where [refTable].[OrderID] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-68.5556901041667,17.9974293059126,213.778046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda2]"
-          TopLeft="329.75,129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,6.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda3]"
-          TopLeft="330,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,1.65234375,199.638046875,12.1953125"
+              BoundingBox="-68.5556901041666,17.9974293059126,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2159,14 +2169,43 @@ where [refTable].[OrderID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add Orders.Paths[Salida de entradas coincidentes de búsqueda3]"
+          TopLeft="330,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,1.65234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Orders\Get Orders">
+    design-time-name="Package\Add Orders\Load Orders">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -2176,7 +2215,7 @@ where [refTable].[OrderID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2186,8 +2225,75 @@ where [refTable].[OrderID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add Orders\Lookup Customer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add Orders\Looukup Orders">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactOrders]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add Orders\Load staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add Orders\Get Orders">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -2217,35 +2323,12 @@ where [refTable].[OrderID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Orders\Lookup Customer">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Add Orders\Lookup ShippingMethod">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2255,59 +2338,10 @@ where [refTable].[OrderID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add Orders\Looukup Orders">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactOrders]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add Orders\Load staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add Orders\Load Orders">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

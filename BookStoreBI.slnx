@@ -26,4 +26,5 @@
     </Project>
   </Folder>
   <Folder Name="/OLAP/" />
+  <Folder Name="/SSRS/" />
 </Solution>

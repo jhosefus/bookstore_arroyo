@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimShippingMethod"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{42D68493-A728-4815-AAE5-9FD205352C1D}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{BBDB256A-232C-4B8C-8920-7328536BE798}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -870,7 +870,7 @@ where [refTable].[MethodID] = ?</property>
         <NodeLayout
           Size="139,42"
           Id="Package\Sync staging"
-          TopLeft="203,316" />
+          TopLeft="211,317" />
         <NodeLayout
           Size="185,42"
           Id="Package\Update PackageConfig"
@@ -947,26 +947,14 @@ where [refTable].[MethodID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8,35"
+              EndConnector="0,36"
               Start="0,0"
-              End="-8,27.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
-                  <mssgle:LineSegment
-                    End="-4,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4,17.5"
-                    Point2="-8,17.5"
-                    Point3="-8,21.5" />
-                  <mssgle:LineSegment
-                    End="-8,27.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -977,30 +965,18 @@ where [refTable].[MethodID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="272.5,358">
+          TopLeft="284,359">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15,32"
+              EndConnector="0,31"
               Start="0,0"
-              End="15,24.5">
+              End="0,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12"
-                    Point2="0,16"
-                    Point3="4,16" />
-                  <mssgle:LineSegment
-                    End="11,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11,16"
-                    Point2="15,16"
-                    Point3="15,20" />
-                  <mssgle:LineSegment
-                    End="15,24.5" />
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1018,13 +994,13 @@ where [refTable].[MethodID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="199,42"
-          Id="Package\Load Shipping\Load DimShippingMethod"
-          TopLeft="316,248" />
-        <NodeLayout
           Size="141,42"
           Id="Package\Load Shipping\Update stage"
           TopLeft="129,254" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Load Shipping\Load DimShippingMethod"
+          TopLeft="316,248" />
         <NodeLayout
           Size="139,42"
           Id="Package\Load Shipping\Get Shipping"
@@ -1052,7 +1028,9 @@ where [refTable].[MethodID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1131,7 +1109,7 @@ where [refTable].[MethodID] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Shipping\Load DimShippingMethod">
+    design-time-name="Package\Load Shipping\Update stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1144,7 +1122,7 @@ where [refTable].[MethodID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Shipping\Update stage">
+    design-time-name="Package\Load Shipping\Load DimShippingMethod">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1170,7 +1148,7 @@ where [refTable].[MethodID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1180,7 +1158,7 @@ where [refTable].[MethodID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

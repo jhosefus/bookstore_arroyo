@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimAddress"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{9AD8EC83-DBC0-486C-B60D-712D2B073773}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{C3D3AFC0-EEA0-4BCA-A0C5-B1D9ABB801DC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=HOME;Initial Catalog=BookStoreDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-DimAddress-{13FA269B-9449-4097-A0F6-82A221B9B0A9}HOME.BookStoreDW;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=HOME;Initial Catalog=BookStoreDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-DimAddress-{13FA269B-9449-4097-A0F6-82A221B9B0A9}HOME.BookStoreDW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=HOME;Initial Catalog=Bookstore;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-DimAddress-{F7E93B35-D5C1-43C9-A1A0-9C6B0D4E57C3}HOME.Bookstore;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=HOME;Initial Catalog=Bookstore;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-DimAddress-{F7E93B35-D5C1-43C9-A1A0-9C6B0D4E57C3}HOME.Bookstore;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1228,7 +1228,7 @@ where [refTable].[AddressID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

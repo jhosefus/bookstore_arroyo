@@ -14,9 +14,8 @@ Este proyecto implementa un Data Warehouse para la gestión de órdenes de libro
 - **DimCustomer**: Datos de clientes y direcciones.
 - **DimAddress**: Ubicaciones de entrega.
 - **DimShippingMethod**: Métodos de envío y costos.
-- **DimOrderStatus**: Estados de las órdenes.
-- **DimDate**: Calendario para análisis temporal.
-- **FactOrders**: Tabla de hechos con métricas de ventas y logística.
+- **DimDate**: Calendario para el análisis temporal.
+- **FactOrders**: Tabla de hechos con toda la información cruzada de dimensiones.
 
 ## Procesos ETL
 - **Extracción**: Procedimientos como GetBookChangesByRowVersion y GetOrdersChangesByRowVersion para extraer la informaciòn y volcarla al DW.

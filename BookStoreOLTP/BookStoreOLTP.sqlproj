@@ -125,6 +125,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="Snapshots" />
+    <Folder Include="Diagrams" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\author.sql">

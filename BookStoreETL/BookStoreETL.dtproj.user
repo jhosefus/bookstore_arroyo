@@ -10,7 +10,7 @@
         <WinAuthDomain />
         <ServerName>HOME</ServerName>
         <PathOnServer>/SSISDB/BookStore/BookStoreETL</PathOnServer>
-        <StartObjectID>FactOrders.dtsx</StartObjectID>
+        <StartObjectID>DimAddress.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

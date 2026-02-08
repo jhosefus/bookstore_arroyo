@@ -1,0 +1,8 @@
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\bin\BookStoreOLAP.asdatabase
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\bin\BookStoreOLAP.deploymenttargets
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\bin\BookStoreOLAP.deploymentoptions
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\obj\Development\BookStoreOLAP.smproj.AssemblyReference.cache
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\obj\Development\BookStoreOLAP.smproj.CoreCompileInputs.cache
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\obj\Development\BookStoreOLAP.asdatabase
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\obj\Development\BookStoreOLAP.deploymentoptions
+J:\maestria\Modulo 04\BookStoreBI\BookStoreOLAP\obj\Development\BookStoreOLAP.deploymenttargets

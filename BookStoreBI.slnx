@@ -3,11 +3,14 @@
     <BuildType Name="Debug" />
     <BuildType Name="Development" />
     <BuildType Name="Release" />
+    <Platform Name="Any CPU" />
+    <Platform Name="x86" />
   </Configurations>
   <Folder Name="/Databases/" />
   <Folder Name="/Databases/DataWarehouse/">
     <Project Path="BookStoreDW/BookStoreDW.sqlproj" Id="dd046a8e-32ce-4e7a-8fb5-ed1ce6aa08fb">
       <BuildType Solution="Development|*" Project="Release" />
+      <Platform Project="AnyCPU" />
       <Build />
       <Deploy />
     </Project>
@@ -15,6 +18,7 @@
   <Folder Name="/Databases/OLTP/">
     <Project Path="BookStoreOLTP/BookStoreOLTP.sqlproj" Id="2580fce4-8f49-4ba5-a7c4-c289bf2e1776">
       <BuildType Solution="Development|*" Project="Release" />
+      <Platform Project="AnyCPU" />
       <Build />
       <Deploy />
     </Project>
@@ -25,6 +29,12 @@
       <Platform Project="?" />
     </Project>
   </Folder>
-  <Folder Name="/OLAP/" />
+  <Folder Name="/OLAP/">
+    <Project Path="BookStoreOLAP/BookStoreOLAP.smproj" Type="6870e480-7721-4708-bfb8-9ae898aa21b3" Id="8ce414bb-95b2-4c99-9e03-51ba72086e22">
+      <BuildType Project="Development" />
+      <Platform Project="x86" />
+      <Deploy />
+    </Project>
+  </Folder>
   <Folder Name="/SSRS/" />
 </Solution>

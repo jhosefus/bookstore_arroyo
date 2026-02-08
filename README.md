@@ -7,6 +7,7 @@ Este proyecto implementa un Data Warehouse para la gestión de órdenes de libro
 - **BookStoreOLTP**: Base de datos transaccional con las tablas del negocio consistentes en libros, autores, clientes y órdenes.
 - **BookStoreDW**: Base de datos dimensional que contiene las tablas de dimensiones y hechos diseñadas para análisis OLAP.
 - **BookStoreETL**: Paquetes en SQL Server Integration Services (SSIS) que cargan dimensiones y hechos, con manejo de errores y àrea de staging.
+- **BookStoreOLAP**: Proyecto Tabular en Analysis Services como implementación de métricas y perspectivas del proyecto.
 - **README.md**: Documentación principal
 
 ## Modelo Dimensional 
